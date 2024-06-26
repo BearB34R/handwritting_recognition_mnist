@@ -137,3 +137,9 @@ image = data.squeeze(0).squeeze(0).cpu().numpy()
 
 plt.imshow(image, cmap='gray')
 plt.savefig('prediction_images/prediction_output.png')
+
+# ========================================================================================================
+# save the model
+# ========================================================================================================
+
+torch.save(model.state_dict(), 'model.pth')
